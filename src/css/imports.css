@@ -1,0 +1,66 @@
+// Bourbon Includes
+	@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+	@import '../../bower_components/neat/app/assets/stylesheets/neat';
+	@import 'base/base';
+
+// // Variables
+//   	// Color
+// 	    $white: #ffffff;
+// 	    $black: #000000;
+// 	    $lightGrey: lighten($black, 90%);
+// 	    $medGrey: lighten($black, 50%);
+// 	    $darkGrey: lighten($black, 25%);
+
+// 	// Spacing
+// 		$spacingXsm: 10px;
+// 		$spacingSm: 25px;
+// 		$spacingMed: 50px;
+// 		$spacingLg: 100px;
+// 		$spacingXl: 150px;
+
+// 	// Breakpoints
+// 		$mobile: new-breakpoint(max-width 480px 4);
+// 		$smallDesktop: new-breakpoint(max-width 960px 12);
+
+// 	// Mixins
+// 		@mixin sidePadding {
+// 			padding: {
+// 				left: $spacingSm;
+// 				right: $spacingSm;
+// 			}
+// 		}
+
+// 		// Centering
+// 			@mixin vertical-align {
+// 			  position: relative;
+// 			  top: 50%;
+// 			  -webkit-transform: translateY(-50%);
+// 			  -ms-transform: translateY(-50%);
+// 			  transform: translateY(-50%);
+// 			}
+
+// 			@mixin vertical-align-fix {
+// 				top: -50%;
+// 				-webkit-transform: translateY(50%);
+// 				-ms-transform: translateY(50%);
+// 				transform: translateY(50%);
+// 			}
+
+// 			@mixin no-vertical-align {
+// 				position: relative;
+// 				top: 0%;
+// 				-webkit-transform: translateY(0%);
+// 				-ms-transform: translateY(0%);
+// 				transform: translateY(0%);
+// 				top: 0%;
+// 				-webkit-transform: translateY(0%);
+// 				-ms-transform: translateY(0%);
+// 				transform: translateY(0%);
+// 			}
+
+// 			@mixin centerDiv {
+// 		    	margin: 0 auto !important;
+// 			}
+
+
+

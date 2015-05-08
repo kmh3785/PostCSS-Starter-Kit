@@ -1,0 +1,35 @@
+{
+  "name": "StarterKit",
+  "version": "1.0.0",
+  "description": "Web starter kit with Bower and Gulp",
+  "main": "index.php",
+  "devDependencies": {
+    "autoprefixer-core": "^5.1.11",
+    "gulp": "^3.8.11",
+    "gulp-postcss": "^5.1.6",
+    "postcss-mixins": "^0.1.1",
+    "postcss-nested": "^0.2.2",
+    "postcss-simple-vars": "^0.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.10.0",
+    "gulp-htmlmin": "^1.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmh3785/Starter-Kit.git"
+  },
+  "author": "Kevin Hughes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmh3785/Starter-Kit/issues"
+  },
+  "homepage": "https://github.com/kmh3785/Starter-Kit",
+  "scripts": {
+    "preinstall": "bower install",
+    "overlayImages": "cd src && mkdir img && cd img && git clone https://github.com/kmh3785/Overlay-Patterns.git"
+  }
+}
