@@ -1,3 +1,5 @@
+@import url('variables.css');
+
 $colorfore: #333;
 $colorback: #fff;
  
@@ -9,7 +11,7 @@ $colorback: #fff;
 main {
     font-family: Arial;
     @mixin reset;
-    color: $colorfore;
+    color: $colorblack;
     background-color: $colorback;
      
     article {

@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     processors = [
+        require('postcss-import'),
         require('postcss-mixins'),
         require('postcss-simple-vars'),
         require('postcss-nested'),

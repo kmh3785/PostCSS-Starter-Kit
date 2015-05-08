@@ -6,17 +6,18 @@
   "devDependencies": {
     "autoprefixer-core": "^5.1.11",
     "gulp": "^3.8.11",
-    "gulp-postcss": "^5.1.6",
-    "postcss-mixins": "^0.1.1",
-    "postcss-nested": "^0.2.2",
-    "postcss-simple-vars": "^0.2.4",
+    "gulp-concat": "^2.5.2",
+    "gulp-htmlmin": "^1.1.1",
+    "gulp-jshint": "^1.10.0",
     "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^5.1.6",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.3",
     "gulp-uglify": "^1.2.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-jshint": "^1.10.0",
-    "gulp-htmlmin": "^1.1.1"
+    "postcss-import": "^5.2.2",
+    "postcss-mixins": "^0.1.1",
+    "postcss-nested": "^0.2.2",
+    "postcss-simple-vars": "^0.2.4"
   },
   "repository": {
     "type": "git",

@@ -1,21 +1,9 @@
 /* Variables*/
   	/* Color*/
-	    $white: #ffffff;
-	    $colorblack: #000000;
-	    $lightGrey: lighten($black, 90%);
-	    $medGrey: lighten($black, 50%);
-	    $darkGrey: lighten($black, 25%);
 
 	/* pacing*/
-		$spacingXsm: 10px;
-		$spacingSm: 25px;
-		$spacingMed: 50px;
-		$spacingLg: 100px;
-		$spacingXl: 150px;
 
 	/* Breakpoints*/
-		$mobile: new-breakpoint(max-width 480px 4);
-		$smallDesktop: new-breakpoint(max-width 960px 12);
 
 	/* Mixins*/
 /*		@mixin sidePadding {
@@ -57,5 +45,16 @@
 		    	margin: 0 auto !important;
 			}
 */
-
-
+ 
+main {
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    background-color: #fff
+}
+ 
+main article {
+    color: #fff;
+    background-color: #333;
+}
