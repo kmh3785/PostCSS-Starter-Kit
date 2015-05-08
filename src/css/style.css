@@ -1,21 +1,12 @@
-@import url('variables.css');
-
-$colorfore: #333;
-$colorback: #fff;
+:root {
+	--black: #000000;
+ }
  
 @define-mixin reset {
     padding: 0;
     margin: 0;
 }
  
-main {
-    font-family: Arial;
-    @mixin reset;
-    color: $colorblack;
-    background-color: $colorback;
-     
-    article {
-        color: $colorback;
-        background-color: $colorfore;
-    }
+body {
+	background: var(--black);
 }
