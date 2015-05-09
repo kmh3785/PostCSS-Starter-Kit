@@ -1,8 +1,7 @@
-@import url('variables.css');
-@import url('../../bower_componments/normalize.css/normalize.css');
-
-html {}
-
+@import 'normalize.css';
+@import 'variables.css';
+@import 'mixins.css';
+/*@import 'bower_components/normalize.css/normalize.css';*/
 
 .hero {
 	height: 50vh;

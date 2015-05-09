@@ -8,7 +8,7 @@ var gulp = require('gulp'),
         require('postcss-simple-vars'),
         require("gulp-cssnext"),
         require('postcss-nested'),
-        require('postcss-import'),
+        require('postcss-import')({path: ['bower_components']}),
         require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] }),
     ];
 
