@@ -26,10 +26,9 @@ var gulp = require('gulp'),
   });
 // Replace
   gulp.task('replace', ['minify'], function(){
-    gulp.src(['build/header.php'])
-      .pipe(replace('</body></html>', ''))
-      .pipe(gulp.dest('build'));
+
   });
+
  // Build project
   gulp.task('build', [
     'css', 
