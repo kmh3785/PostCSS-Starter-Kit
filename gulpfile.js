@@ -4,25 +4,19 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     replace = require('gulp-replace'),
     cssnext = require("gulp-cssnext");
-    processors = [
-        require('postcss-mixins'),
+    mixins = require('postcss-mixins')
+// compile CSS
+  gulp.task('styles', function() {
+    return gulp.src('src/css/style.css')
+      .pipe(postcss([
+        // require('postcss-mixins'),
         require('postcss-simple-vars'),
         require('postcss-nested'),
         require('postcss-import')({path: ['bower_components']}),
         require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] }),
-    ];
-
-// compile CSS
-  gulp.task('cssnext', function() {
-    return gulp.src('src/css/style.css')
+        // require("gulp-cssnext")
+      ]))
       .pipe(cssnext())
-      .pipe(gulp.dest('build/css/'))
-  });
-
-  gulp.task('styles', function() {
-    return gulp.src('src/css/style.css')
-      .pipe(cssnext())
-      .pipe(postcss(processors))
       .pipe(gulp.dest('build/css/'))
   });
 

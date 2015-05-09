@@ -1,5 +1,5 @@
 	/* Mixins*/
-		@mixin sidePadding {
+		@define-mixin sidePadding {
 			padding: {
 				left: --spacingSm;
 				right: --spacingSm;
@@ -7,18 +7,18 @@
 		}
 
 		/* Centering*/
-			@mixin vertical-align {
+			@define-mixin vertical-align {
 			  position: relative;
 			  top: 50%;
 			  transform: translateY(-50%);
 			}
 
-			@mixin vertical-align-fix {
+			@define-mixin vertical-align-fix {
 				top: -50%;
 				transform: translateY(50%);
 			}
 
-			@mixin no-vertical-align {
+			@define-mixin no-vertical-align {
 				position: relative;
 				top: 0%;
 				transform: translateY(0%);
@@ -26,7 +26,7 @@
 				transform: translateY(0%);
 			}
 
-			@mixin centerDiv {
+			@define-mixin centerDiv {
 		    	margin: 0 auto !important;
 			}
 

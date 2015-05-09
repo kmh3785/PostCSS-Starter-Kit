@@ -20,9 +20,9 @@
     "install": "^0.1.8",
     "npm": "^2.9.1",
     "postcss-import": "^5.2.2",
-    "postcss-mixins": "^0.1.1",
+    "postcss-mixins": "^0.2.0",
     "postcss-nested": "^0.2.2",
-    "postcss-simple-vars": "^0.2.4"
+    "postcss-simple-vars": "^0.3.0"
   },
   "repository": {
     "type": "git",

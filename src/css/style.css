@@ -1,18 +1,30 @@
+@import 'mixins.css';
 @import 'normalize.css';
 @import 'variables.css';
-@import 'mixins.css';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400|Gentium+Book+Basic);
+
 /*@import 'bower_components/normalize.css/normalize.css';*/
 
 /* Start site-specific variables */
 	:root {
-		--heroSize: 65vh;
+		--heroSize: 85vh;
+	}
+/* Start custom selectors */
+	@custom-selector --heading h1, h2, h3, h4, h5, h6;
+
+/*Universal styles */
+	--heading {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
 	}
 .hero {
-	height: var(--heroSize);
+	/*height: var(--heroSize);*/
 	.content {
+		@mixin vertical-align;
 		position: relative;
 		z-index: 2;
-		
+		text-align: center;
+		/*padding-top: var(--spacingLg);*/
 	}
 	#heroBackground {
 		position: absolute;
