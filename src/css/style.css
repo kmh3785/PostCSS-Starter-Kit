@@ -13,11 +13,15 @@
     padding: 0;
     margin: 0;
 }
- 
+
+html {
+	/*// @mixin reset;*/
+}
+
 
 .hero {
 	height: 50vh;
-	background: var(--white);
+	background: red;
 	.content {
 	
 	}
