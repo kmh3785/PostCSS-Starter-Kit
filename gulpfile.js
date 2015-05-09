@@ -32,7 +32,7 @@ var gulp = require('gulp'),
       'bower_components/d3/d3.min.js', 
       'bower_components/trianglify/dist/trianglify.min.js', 
       'src/js/scripts.js'])
-      .pipe(concat('scripts.js'))
+      .pipe(concat('scripts.min.js'))
       .pipe(gulp.dest('build/js'));
   });
 
@@ -46,8 +46,8 @@ var gulp = require('gulp'),
     // Watch .scss files
     gulp.watch('src/css/**/*.css', ['styles']);
    
-    // Watch .js files
-    // gulp.watch('src/js/**/*.js', ['scripts']);
+    //Watch .js files
+    gulp.watch('src/js/**/*.js', ['scripts']);
    
     // Watch image files
     // gulp.watch('src/img/**/*', ['images']);
