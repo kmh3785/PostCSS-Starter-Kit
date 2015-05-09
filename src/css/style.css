@@ -1,5 +1,12 @@
 :root {
-	--black: #000000;
+	/*Variables must be declared here */
+	--black: rgb(0,0,0);
+	--white: rgb(255,255,255);
+	--spacingXsm: 10px;
+	--spacingSm: 25px;
+	--spacingMed: 50px;
+	--spacingLg: 100px;
+	--spacingXl: 150px;
  }
  
 @define-mixin reset {
@@ -7,6 +14,11 @@
     margin: 0;
 }
  
-body {
-	background: var(--black);
+
+.hero {
+	height: 50vh;
+	background: var(--white);
+	.content {
+	
+	}
 }
