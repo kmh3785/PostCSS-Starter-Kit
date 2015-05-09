@@ -3,10 +3,23 @@
 @import 'mixins.css';
 /*@import 'bower_components/normalize.css/normalize.css';*/
 
+/* Start site-specific variables */
+	:root {
+		--heroSize: 65vh;
+	}
 .hero {
-	height: 50vh;
-	background: var(--medGrey);
+	height: var(--heroSize);
 	.content {
+		position: relative;
+		z-index: 2;
 		
+	}
+	#heroBackground {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: var(--heroSize);
+		top: 0px;
+		left: 0px;
 	}
 }
