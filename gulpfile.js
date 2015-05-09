@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
+    replace = require('gulp-replace'),
     cssnext = require("gulp-cssnext"),
     processors = [
         require('postcss-mixins'),
@@ -25,8 +26,8 @@ var gulp = require('gulp'),
   });
 // Replace
   gulp.task('replace', ['minify'], function(){
-    gulp.src(['*.php'])
-      .pipe(replace('data-bodyclass', '<?php body_class(); ?>'))
+    gulp.src(['build/header.php'])
+      .pipe(replace('</body></html>', ''))
       .pipe(gulp.dest('build'));
   });
  // Build project
