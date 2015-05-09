@@ -1,10 +1,7 @@
 var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
-    importCss = require('gulp-import-css'),
-    cssimport = require("gulp-cssimport"),
     cssnext = require("gulp-cssnext"),
     processors = [
-        require('postcss-import'),
         require('postcss-mixins'),
         require('postcss-simple-vars'),
         require('postcss-nested'),
@@ -26,3 +23,9 @@ var gulp = require('gulp'),
     return gulp.src('src/**/*.php')
       .pipe(gulp.dest('build'))
   });
+
+ // Build project
+  gulp.task('build', [
+    'css', 
+    'minify'
+  ]);
