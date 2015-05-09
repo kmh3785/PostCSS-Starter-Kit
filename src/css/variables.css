@@ -1,17 +1,15 @@
-/* Variables*/
+	/* Variables*/
   	/* Color*/
-	    $white: #ffffff;
-	    $colorblack: #000000;
-	    $lightGrey: lighten($black, 90%);
-	    $medGrey: lighten($black, 50%);
-	    $darkGrey: lighten($black, 25%);
+	    --white: rgb(255,255,255);
+	    --black: rgb(0,0,0);
+	    
 
-	/* pacing*/
-		$spacingXsm: 10px;
-		$spacingSm: 25px;
-		$spacingMed: 50px;
-		$spacingLg: 100px;
-		$spacingXl: 150px;
+	/* Spacing*/
+		--spacingXsm: 10px;
+		--spacingSm: 25px;
+		--spacingMed: 50px;
+		--spacingLg: 100px;
+		--spacingXl: 150px;
 
 	/* Breakpoints*/
 		$mobile: new-breakpoint(max-width 480px 4);
@@ -20,8 +18,8 @@
 	/* Mixins*/
 /*		@mixin sidePadding {
 			padding: {
-				left: $spacingSm;
-				right: $spacingSm;
+				left: --spacingSm;
+				right: --spacingSm;
 			}
 		}*/
 

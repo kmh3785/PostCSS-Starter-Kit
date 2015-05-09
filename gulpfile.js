@@ -1,31 +1,41 @@
 var gulp = require('gulp'),
     fs = require("fs"),
-    atImport = require("postcss-import"),
+    concat = require('gulp-concat'),
     postcss = require('gulp-postcss'),
     replace = require('gulp-replace'),
-    cssnext = require("gulp-cssnext"),
     processors = [
         require('postcss-mixins'),
         require('postcss-simple-vars'),
+        require("gulp-cssnext"),
         require('postcss-nested'),
+        require('postcss-import'),
         require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] }),
     ];
 
 // compile CSS
   gulp.task('styles', function() {
     return gulp.src('src/css/style.css')
-      .pipe(cssnext({
-        compress: "false"
-      }))
       .pipe(postcss(processors))
       .pipe(gulp.dest('build/css/'))
   });
 
-// compile html
+// compile HTML
   gulp.task('minify', function() {
     return gulp.src('src/**/*.php')
       .pipe(gulp.dest('build'))
   });
+
+// Compile scripts
+  gulp.task('scripts', function() {
+    return gulp.src([
+      'bower_components/jquery/dist/jquery.min.js', 
+      'bower_components/d3/d3.min.js', 
+      'bower_components/trianglify/dist/trianglify.min.js', 
+      'src/js/scripts.js'])
+      .pipe(concat('scripts.js'))
+      .pipe(gulp.dest('build/js'));
+  });
+
 // Replace
   gulp.task('replace', ['minify'], function(){
 
@@ -54,6 +64,6 @@ var gulp = require('gulp'),
   });
  // Build project
   gulp.task('build', [
-    'css', 
+    'styles', 
     'minify'
   ]);

@@ -1,28 +1,13 @@
-:root {
-	/*Variables must be declared here */
-	--black: rgb(0,0,0);
-	--white: rgb(255,255,255);
-	--spacingXsm: 10px;
-	--spacingSm: 25px;
-	--spacingMed: 50px;
-	--spacingLg: 100px;
-	--spacingXl: 150px;
- }
- 
-@define-mixin reset {
-    padding: 0;
-    margin: 0;
-}
+@import url('variables.css');
+@import url('../../bower_componments/normalize.css/normalize.css');
 
-html {
-	/*// @mixin reset;*/
-}
+html {}
 
 
 .hero {
 	height: 50vh;
-	background: red;
+	background: var(--medGrey);
 	.content {
-	
+		
 	}
 }
