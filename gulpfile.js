@@ -14,7 +14,7 @@ var gulp = require('gulp'),
       .pipe(cssnext({
         compress: "false"
       }))
-      // .pipe(postcss(processors))
+      .pipe(postcss(processors))
       .pipe(gulp.dest('build/css/'))
   });
 
@@ -23,7 +23,12 @@ var gulp = require('gulp'),
     return gulp.src('src/**/*.php')
       .pipe(gulp.dest('build'))
   });
-
+// Replace
+  gulp.task('replace', ['minify'], function(){
+    gulp.src(['*.php'])
+      .pipe(replace('data-bodyclass', '<?php body_class(); ?>'))
+      .pipe(gulp.dest('build'));
+  });
  // Build project
   gulp.task('build', [
     'css', 
