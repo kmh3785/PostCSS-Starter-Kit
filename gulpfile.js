@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     ];
 
 // compile CSS
-  gulp.task('css', function() {
+  gulp.task('styles', function() {
     return gulp.src('src/css/style.css')
       .pipe(cssnext({
         compress: "false"
@@ -28,7 +28,28 @@ var gulp = require('gulp'),
   gulp.task('replace', ['minify'], function(){
 
   });
+// Watch
+  gulp.task('watch', function() {
+   
+    // Watch .scss files
+    gulp.watch('src/css/**/*.css', ['styles']);
+   
+    // Watch .js files
+    // gulp.watch('src/js/**/*.js', ['scripts']);
+   
+    // Watch image files
+    // gulp.watch('src/img/**/*', ['images']);
 
+    // Watch php files
+    gulp.watch('src/*.php', ['replace']);
+   
+    // Create LiveReload server
+    // livereload.listen();
+   
+    // Watch any files in build/, reload on change
+    // gulp.watch(['/']).on('change', livereload.changed);
+   
+  });
  // Build project
   gulp.task('build', [
     'css', 
