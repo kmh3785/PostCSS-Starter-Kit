@@ -18,13 +18,23 @@
 	}
 #hero {
 	height: var(--heroSize);
-	position: absolute;
-	width: 100%;
+	/*position: absolute;*/
+	/*width: 100%;*/
 	.content {
 		@mixin vertical-align;
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 		text-align: center;
+	}
+
+	.overlay {
+		background:url('../img/Overlay-Patterns/elegant_grid.png');
+		width: 100%;
+		height: var(--heroSize);
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		opacity:.8;
 	}
 	#heroBackground {
 		position: absolute;

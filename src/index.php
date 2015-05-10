@@ -7,4 +7,24 @@
 	<div class="overlay"></div>
 	<canvas id="heroBackground"></canvas>
 </section>
+
+<section id="about">
+	<div class="content">
+		<div class="column">
+			One
+		</div>
+
+		<div class="column">
+		Two
+		</div>
+
+		<div class="column">
+		Three
+		</div>
+
+		<div class="column">
+		Four
+		</div>
+	</div>
+</section>
 <?php include('footer.php'); ?>
