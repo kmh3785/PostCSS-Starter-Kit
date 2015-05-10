@@ -4,6 +4,7 @@
 		<h1>CSS4+ Starter Kit</h1>
 		<h2>Start using the CSS4 spec today!</h2>
 	</div>
+	<div class="overlay"></div>
 	<canvas id="heroBackground"></canvas>
 </section>
 <?php include('footer.php'); ?>

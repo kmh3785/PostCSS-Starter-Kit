@@ -4,7 +4,9 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     replace = require('gulp-replace'),
     cssnext = require("gulp-cssnext"),
-    mixins = require('postcss-mixins');
+    mixins = require('postcss-mixins'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant');
 // compile CSS
   gulp.task('styles', function() {
     return gulp.src('src/css/style.css')
@@ -24,6 +26,16 @@ var gulp = require('gulp'),
     return gulp.src('src/**/*.php')
       .pipe(gulp.dest('build'))
   });
+
+gulp.task('images', function () {
+    return gulp.src('src/img/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('build/img'));
+});
 
 // Compile scripts
   gulp.task('scripts', function() {
@@ -48,7 +60,7 @@ var gulp = require('gulp'),
     gulp.watch('src/js/**/*.js', ['scripts']);
    
     // Watch image files
-    // gulp.watch('src/img/**/*', ['images']);
+    gulp.watch('src/img/**/*', ['images']);
 
     // Watch php files
     gulp.watch('src/*.php', ['replace']);
@@ -64,5 +76,6 @@ var gulp = require('gulp'),
   gulp.task('build', [
     'styles', 
     'minify',
-    'scripts'
+    'scripts',
+    'images'
   ]);
