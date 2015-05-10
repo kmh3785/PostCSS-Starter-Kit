@@ -14,9 +14,8 @@ var gulp = require('gulp'),
         require('postcss-simple-vars'),
         require('postcss-nested'),
         require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] }),
-        // require("gulp-cssnext")
+        require("gulp-cssnext")
       ]))
-      .pipe(cssnext())
       .pipe(gulp.dest('build/css/'))
   });
 
