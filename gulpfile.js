@@ -18,8 +18,14 @@ var gulp = require('gulp'),
       container: '1700px'
     });
     fs.writeFileSync('src/css/grid.css', css);
-
-
+  });
+  gulp.task('extend', function() {
+    var css = autogrid({
+      columns: 12,
+      gutter: '20px',
+      container: '1700px'
+    });
+    fs.writeFileSync('src/css/grid.css', css);
   });
 
 // compile CSS
@@ -31,8 +37,8 @@ var gulp = require('gulp'),
         require('postcss-simple-vars'),
         require('postcss-nested'),
         require('postcss-extend'),
-        require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] }),
-        // require("gulp-cssnext")
+        require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] })
+        
       ]))
       .pipe(cssnext())
       .pipe(gulp.dest('build/css/'))
