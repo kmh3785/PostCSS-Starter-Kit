@@ -7,9 +7,11 @@ var gulp = require('gulp'),
     mixins = require('postcss-mixins'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    notify = require('gulp-notify');
-    autogrid = require('autogrid');
-    extend = require("postcss-extend")
+    notify = require('gulp-notify'),
+    autogrid = require('autogrid'),
+    extend = require("postcss-extend"),
+    include = require('postcss-include')
+
 // Grid editor
   gulp.task('grid', function() {
     var css = autogrid({
