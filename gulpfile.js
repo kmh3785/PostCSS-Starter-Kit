@@ -63,5 +63,6 @@ var gulp = require('gulp'),
  // Build project
   gulp.task('build', [
     'styles', 
-    'minify'
+    'minify',
+    'scripts'
   ]);
