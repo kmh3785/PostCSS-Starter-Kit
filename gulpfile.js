@@ -9,19 +9,10 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     notify = require('gulp-notify'),
     autogrid = require('autogrid'),
-    extend = require("postcss-extend"),
     include = require('postcss-include')
 
 // Grid editor
   gulp.task('grid', function() {
-    var css = autogrid({
-      columns: 12,
-      gutter: '20px',
-      container: '1700px'
-    });
-    fs.writeFileSync('src/css/grid.css', css);
-  });
-  gulp.task('extend', function() {
     var css = autogrid({
       columns: 12,
       gutter: '20px',
