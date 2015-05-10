@@ -8,6 +8,20 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     notify = require('gulp-notify');
+    autogrid = require('autogrid');
+    extend = require("postcss-extend")
+// Grid editor
+  gulp.task('grid', function() {
+    var css = autogrid({
+      columns: 12,
+      gutter: '20px',
+      container: '1700px'
+    });
+    fs.writeFileSync('src/css/grid.css', css);
+
+
+  });
+
 // compile CSS
   gulp.task('styles', function() {
     return gulp.src('src/css/style.css')
@@ -16,6 +30,7 @@ var gulp = require('gulp'),
         require('postcss-mixins'),
         require('postcss-simple-vars'),
         require('postcss-nested'),
+        require('postcss-extend'),
         require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] }),
         // require("gulp-cssnext")
       ]))
@@ -30,6 +45,7 @@ var gulp = require('gulp'),
       .pipe(gulp.dest('build'))
       .pipe(notify({ message: 'HTML compile finished' }))
   });
+
 
 // Images
   gulp.task('images', function() {

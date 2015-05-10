@@ -4,6 +4,7 @@
   "description": "Web starter kit with Bower, Gulp and PostCSS",
   "main": "index.php",
   "devDependencies": {
+    "autogrid": "^1.0.6",
     "autoprefixer-core": "^5.1.11",
     "fs": "0.0.2",
     "gulp": "^3.8.11",
@@ -19,6 +20,7 @@
     "gulp-uglify": "^1.2.0",
     "gulp-watch": "^4.2.4",
     "imagemin-pngquant": "^4.1.0",
+    "postcss-extend": "^0.3.0",
     "postcss-import": "^5.2.2",
     "postcss-mixins": "^0.2.0",
     "postcss-nested": "^0.2.2",
