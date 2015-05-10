@@ -1,7 +1,7 @@
 {
   "name": "StarterKit",
   "version": "1.0.0",
-  "description": "Web starter kit with Bower and Gulp",
+  "description": "Web starter kit with Bower, Gulp and PostCSS",
   "main": "index.php",
   "devDependencies": {
     "autoprefixer-core": "^5.1.11",
@@ -17,8 +17,6 @@
     "gulp-replace": "^0.5.3",
     "gulp-uglify": "^1.2.0",
     "gulp-watch": "^4.2.4",
-    "install": "^0.1.8",
-    "npm": "^2.9.1",
     "postcss-import": "^5.2.2",
     "postcss-mixins": "^0.2.0",
     "postcss-nested": "^0.2.2",
@@ -35,7 +33,6 @@
   },
   "homepage": "https://github.com/kmh3785/Starter-Kit",
   "scripts": {
-    "preinstall": "bower install",
-    "overlayImages": "cd src && mkdir img && cd img && git clone https://github.com/kmh3785/Overlay-Patterns.git"
+    "preinstall": "bower install && cd src && mkdir img && cd img && git clone https://github.com/kmh3785/Overlay-Patterns.git"
   }
 }

@@ -3,6 +3,7 @@
 /bower_components
 /node_modules
 /.sass-cache
+/src/img/
 
 # Raw Adobe files #
 ###################
