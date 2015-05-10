@@ -18,13 +18,12 @@
 		font-weight: 300;
 	}
 .hero {
-	/*height: var(--heroSize);*/
+	height: var(--heroSize);
 	.content {
 		@mixin vertical-align;
 		position: relative;
 		z-index: 2;
 		text-align: center;
-		/*padding-top: var(--spacingLg);*/
 	}
 	#heroBackground {
 		position: absolute;

@@ -2,44 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400|Gentium+Book+Basic);
 
 /* Mixins*/
-		@define-mixin sidePadding {
-			padding: {
-				left: --spacingSm;
-				right: --spacingSm;
-			}
-		}
 
 		/* Centering*/
-			@define-mixin vertical-align {
-			  position: relative;
-			  top: 50%;
-			  -webkit-transform: translateY(-50%);
-			          -ms-transform: translateY(-50%);
-			      transform: translateY(-50%);
-			}
-
-			@define-mixin vertical-align-fix {
-				top: -50%;
-				-webkit-transform: translateY(50%);
-				        -ms-transform: translateY(50%);
-				    transform: translateY(50%);
-			}
-
-			@define-mixin no-vertical-align {
-				position: relative;
-				top: 0%;
-				-webkit-transform: translateY(0%);
-				        -ms-transform: translateY(0%);
-				    transform: translateY(0%);
-				top: 0%;
-				-webkit-transform: translateY(0%);
-				        -ms-transform: translateY(0%);
-				    transform: translateY(0%);
-			}
-
-			@define-mixin centerDiv {
-		    	margin: 0 auto !important;
-			}
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -471,8 +435,6 @@ th {
 	/* Spacing*/
 
 	/* Breakpoints*/
-		$mobile: new-breakpoint(max-width 480px 4);
-		$smallDesktop: new-breakpoint(max-width 960px 12);
 }
 
 /*@import 'bower_components/normalize.css/normalize.css';*/
@@ -491,21 +453,23 @@ h6 {
 		font-weight: 300;
 	}
 .hero {
-	/*height: var(--heroSize);*/
+	height: 85vh
 }
 .hero .content {
-			position: relative;
-			z-index: 2;
-			text-align: center;
-
-			/*padding-top: var(--spacingLg);*/
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
-@mixin vertical-align;
 .hero #heroBackground {
-			position: absolute;
-			z-index: 1;
-			width: 100%;
-			height: 85vh;
-			top: 0px;
-			left: 0px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 85vh;
+  top: 0px;
+  left: 0px;
 }
