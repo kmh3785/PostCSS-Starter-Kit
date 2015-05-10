@@ -1,8 +1,8 @@
 @import 'mixins.css';
-@import 'normalize.css';
+/*@import 'normalize.css';*/
 @import 'variables.css';
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400|Gentium+Book+Basic);
-/*@import 'bower_components/normalize.css/normalize.css';*/
+@import '../../bower_components/normalize.css/normalize.css';
 
 /* Start site-specific variables */
 	:root {

@@ -12,7 +12,7 @@ var gulp = require('gulp'),
   gulp.task('styles', function() {
     return gulp.src('src/css/style.css')
       .pipe(postcss([
-        require('postcss-import')({path: ['bower_components']}),
+        require('postcss-import')({path: ['bower_components'], from: 'src/css/style.css'}),
         require('postcss-mixins'),
         require('postcss-simple-vars'),
         require('postcss-nested'),
