@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     cssnext = require("gulp-cssnext"),
     mixins = require('postcss-mixins'),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant');
+    pngquant = require('imagemin-pngquant'),
+    notify = require('gulp-notify');
 // compile CSS
   gulp.task('styles', function() {
     return gulp.src('src/css/style.css')
