@@ -21,12 +21,14 @@ var gulp = require('gulp'),
       ]))
       .pipe(cssnext())
       .pipe(gulp.dest('build/css/'))
+      .pipe(notify({ message: 'Styles task complete' }))
   });
 
 // compile HTML
   gulp.task('minify', function() {
     return gulp.src('src/**/*.php')
       .pipe(gulp.dest('build'))
+      .pipe(notify({ message: 'HTML compile finished' }))
   });
 
 // Images
@@ -44,7 +46,8 @@ var gulp = require('gulp'),
       'bower_components/**/*.min.js', 
       'src/js/scripts.js'])
       .pipe(concat('scripts.min.js'))
-      .pipe(gulp.dest('build/js'));
+      .pipe(gulp.dest('build/js'))
+      .pipe(notify({ message: 'Javascript compiled' }));
   });
 
 // Replace
