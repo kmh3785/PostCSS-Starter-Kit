@@ -16,8 +16,9 @@ var gulp = require('gulp'),
         require('postcss-simple-vars'),
         require('postcss-nested'),
         require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] }),
-        require("gulp-cssnext")
+        // require("gulp-cssnext")
       ]))
+      .pipe(cssnext())
       .pipe(gulp.dest('build/css/'))
   });
 
@@ -27,15 +28,14 @@ var gulp = require('gulp'),
       .pipe(gulp.dest('build'))
   });
 
-gulp.task('images', function () {
-    return gulp.src('src/img/*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest('build/img'));
-});
+// Images
+  gulp.task('images', function() {
+    return gulp.src('src/img/**/*')
+      .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+      .pipe(gulp.dest('build/img'))
+      .pipe(notify({ message: 'Images task complete' }));
+  });
+ 
 
 // Compile scripts
   gulp.task('scripts', function() {

@@ -431,49 +431,46 @@ th {
 :root {
 /* Variables*/
   	/* Color*/
-	    --white: rgb(255,255,255);
-	    --black: rgb(0,0,0);
 	    
 	/* Spacing*/
-		--spacingXsm: 10px;
-		--spacingSm: 25px;
-		--spacingMed: 50px;
-		--spacingLg: 100px;
-		--spacingXl: 150px;
 
 	/* Breakpoints*/
 }
 /*@import 'bower_components/normalize.css/normalize.css';*/
 
 /* Start site-specific variables */
-	:root {
-		--heroSize: 85vh;
-	}
 /* Start custom selectors */
-	@custom-selector --heading h1, h2, h3, h4, h5, h6;
 
 /*Universal styles */
-	--heading {
+	h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
 	}
-.hero {
-	height: var(--heroSize)
+#hero {
+	height: 85vh;
+	position: absolute;
+	width: 100%
 }
-.hero .content {
+#hero .content {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   position: relative;
   z-index: 2;
   text-align: center;
 }
-.hero #heroBackground {
+#hero #heroBackground {
   position: absolute;
   z-index: 1;
   width: 100%;
-  height: var(--heroSize);
+  height: 85vh;
   top: 0px;
   left: 0px;
 }
