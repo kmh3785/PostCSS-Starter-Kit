@@ -29,11 +29,12 @@ var gulp = require('gulp'),
         require('postcss-mixins'),
         require('postcss-simple-vars'),
         require('postcss-nested'),
-        require('postcss-extend'),
+        require('postcss-include'),
         require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] })
         
       ]))
       .pipe(cssnext())
+      // .pipe(include({ css: 'src/css/style.css' }))
       .pipe(gulp.dest('build/css/'))
       .pipe(notify({ message: 'Styles task complete' }))
   });

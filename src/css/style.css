@@ -21,7 +21,6 @@
 	height: var(--heroSize);
 
 	.content {
-		/*@extend .container;*/
 		@mixin vertical-align;
 		z-index: 3;
 		text-align: center;
