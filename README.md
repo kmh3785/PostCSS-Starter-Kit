@@ -33,8 +33,6 @@ This starter kit makes use of a few common features and plugins that will make t
 ### PostCSS plugins
 - postcss-import [Imports and inlines @import rules]
 - postcss-mixins [Allows mixin support]
- - Define mixins as @define-mixin mixin_name { /* CSS here */ }
- - Use mixins as @mixin mixin_name
 - postcss-nested [Allows nested CSS]
 - postcss-cssnext [Allows use of CSS4 syntax and features]
 
@@ -50,14 +48,22 @@ This starter kit makes use of a few common features and plugins that will make t
 
 body {
   color: var(--mainColor);
-
   font-size: var(--fontSize);
   line-height: calc(var(--fontSize) * 1.5);
   padding: calc((var(--fontSize) / 2) + 1px);
 }
 
 ```
+##### Mixins
+```
+@define-mixin mixin_name { 
+	/* CSS here */ 
+}
 
+body {
+	@mixin mixin_name
+}
+```
 ##### Custom selectors
 ```
 @custom-selector --heading h1, h2, h3, h4, h5, h6;
