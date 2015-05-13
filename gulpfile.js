@@ -8,8 +8,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     notify = require('gulp-notify'),
-    autogrid = require('autogrid'),
-    include = require('postcss-include')
+    autogrid = require('autogrid')
 
 // Grid editor
   gulp.task('grid', function() {
@@ -26,15 +25,15 @@ var gulp = require('gulp'),
     return gulp.src('src/css/style.css')
       .pipe(postcss([
         require('postcss-import')({path: ['bower_components'], from: 'src/css/style.css'}),
-        require('postcss-mixins'),
+        require('postcss-mixins')({
+          mixins: require('postcss-neat')()
+        }),
         require('postcss-simple-vars'),
-        require('postcss-nested'),
-        require('postcss-include'),
+        require('postcss-nested').
         require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] })
         
       ]))
       .pipe(cssnext())
-      // .pipe(include({ css: 'src/css/style.css' }))
       .pipe(gulp.dest('build/css/'))
       .pipe(notify({ message: 'Styles task complete' }))
   });

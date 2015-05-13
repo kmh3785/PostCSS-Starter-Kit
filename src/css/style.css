@@ -22,6 +22,9 @@
 
 	.content {
 		@mixin vertical-align;
+		/*
+		 *@include .container
+		 */
 		z-index: 3;
 		text-align: center;
 	}
