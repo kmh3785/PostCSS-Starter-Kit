@@ -26,7 +26,9 @@ var gulp = require('gulp'),
     return gulp.src('src/css/style.css')
       .pipe(postcss([
         require('postcss-import')({path: ['bower_components'], from: 'src/css/style.css'}),
-        require('postcss-mixins'),
+        require('postcss-mixins')({
+          mixins: require('postcss-neat')()
+        }),
         require('postcss-nested')     
       ]))
       .pipe(cssnext()) // Autoprefixer is included in cssnext
