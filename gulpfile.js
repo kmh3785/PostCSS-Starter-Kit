@@ -27,7 +27,7 @@ var gulp = require('gulp'),
       .pipe(postcss([
         require('postcss-import')({path: ['bower_components'], from: 'src/css/style.css'}),
         require('postcss-mixins')({
-          mixins: require('postcss-neat')()
+          // mixins: require('postcss-neat')()
         }),
         require('postcss-nested')     
       ]))

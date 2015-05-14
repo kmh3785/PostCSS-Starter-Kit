@@ -23,7 +23,8 @@
     "imagemin-pngquant": "^4.1.0",
     "postcss-mixins": "^0.2.0",
     "postcss-neat": "^1.0.0",
-    "postcss-nested": "^0.3.1"
+    "postcss-nested": "^0.3.1",
+    "postcss-simple-vars": "^0.3.0"
   },
   "repository": {
     "type": "git",
