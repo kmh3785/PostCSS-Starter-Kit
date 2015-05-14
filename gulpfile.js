@@ -27,14 +27,9 @@ var gulp = require('gulp'),
       .pipe(postcss([
         require('postcss-import')({path: ['bower_components'], from: 'src/css/style.css'}),
         require('postcss-mixins'),
-        require('postcss-simple-vars'),
-        require('postcss-nested'),
-        require('postcss-include'),
-        require('autoprefixer-core')({ browsers: ['last 2 versions', '> 2%'] })
-        
+        require('postcss-nested')     
       ]))
-      .pipe(cssnext())
-      // .pipe(include({ css: 'src/css/style.css' }))
+      .pipe(cssnext()) // Autoprefixer is included in cssnext
       .pipe(gulp.dest('build/css/'))
       .pipe(notify({ message: 'Styles task complete' }))
   });
