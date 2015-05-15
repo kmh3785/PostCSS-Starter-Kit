@@ -44,3 +44,10 @@
 		left: 0px;
 	}
 }
+
+/*About*/
+	.about {
+		.content {
+			/*@mixin outer-container;*/
+		}
+	}

@@ -1,34 +1,24 @@
+require('postcss-neat/es6-reg');
+
 var gulp = require('gulp'),
     fs = require("fs"),
     concat = require('gulp-concat'),
     postcss = require('gulp-postcss'),
     replace = require('gulp-replace'),
     cssnext = require("gulp-cssnext"),
-    mixins = require('postcss-mixins'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     notify = require('gulp-notify'),
-    autogrid = require('autogrid'),
     include = require('postcss-include')
 
-// Grid editor
-  gulp.task('grid', function() {
-    var css = autogrid({
-      columns: 12,
-      gutter: '20px',
-      container: '1700px'
-    });
-    fs.writeFileSync('src/css/grid.css', css);
-  });
 
 // compile CSS
   gulp.task('styles', function() {
     return gulp.src('src/css/style.css')
       .pipe(postcss([
+        require('postcss-simple-vars'),
         require('postcss-import')({path: ['bower_components'], from: 'src/css/style.css'}),
-        require('postcss-mixins')({
-          // mixins: require('postcss-neat')()
-        }),
+        require('postcss-mixins')({mixins: require('postcss-neat')}),
         require('postcss-nested')     
       ]))
       .pipe(cssnext()) // Autoprefixer is included in cssnext
