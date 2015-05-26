@@ -1,4 +1,3 @@
-@import 'grid.css';
 @import 'mixins.css';
 @import 'variables.css';
 @import '../../bower_components/normalize.css/normalize.css';
@@ -46,8 +45,11 @@
 }
 
 /*About*/
-	.about {
+	#about {
 		.content {
-			/*@mixin outer-container;*/
+			@mixin outer-container;
+			.column {
+				@mixin span-columns 3;
+			}
 		}
 	}
