@@ -3,11 +3,14 @@ require('postcss-neat/es6-reg');
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     postcss = require('gulp-postcss'),
+    cssmin = require('gulp-cssmin'),
     replace = require('gulp-replace'),
     cssnext = require("gulp-cssnext"),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     notify = require('gulp-notify')
+
+
 
 // compile CSS
   gulp.task('styles', function() {
@@ -19,6 +22,7 @@ var gulp = require('gulp'),
         require('postcss-nested')     
       ]))
       .pipe(cssnext()) // Autoprefixer is included in cssnext
+      .pipe(cssmin())
       .pipe(gulp.dest('build/css/'))
       .pipe(notify({ message: 'Styles task complete' }))
   });
