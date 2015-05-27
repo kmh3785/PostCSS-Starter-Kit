@@ -1,16 +1,13 @@
 require('postcss-neat/es6-reg');
 
 var gulp = require('gulp'),
-    fs = require("fs"),
     concat = require('gulp-concat'),
     postcss = require('gulp-postcss'),
     replace = require('gulp-replace'),
     cssnext = require("gulp-cssnext"),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    notify = require('gulp-notify'),
-    include = require('postcss-include')
-
+    notify = require('gulp-notify')
 
 // compile CSS
   gulp.task('styles', function() {
