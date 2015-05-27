@@ -16,7 +16,6 @@ var gulp = require('gulp'),
   gulp.task('styles', function() {
     return gulp.src('src/css/style.css')
       .pipe(postcss([
-        // require('postcss-simple-vars'),
         require('postcss-import')({path: ['bower_components'], from: 'src/css/style.css'}),
         require('postcss-mixins')({mixins: require('postcss-neat')()}),
         require('postcss-nested')     
