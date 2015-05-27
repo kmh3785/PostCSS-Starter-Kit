@@ -4,6 +4,7 @@
 /node_modules
 /.sass-cache
 /build
+/src/img
 
 # Raw Adobe files #
 ###################
