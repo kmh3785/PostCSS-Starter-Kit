@@ -12,6 +12,6 @@
 		--spacingXl: 150px;
 
 	/* Breakpoints*/
-		$mobile: new-breakpoint(max-width 480px 4);
-		$smallDesktop: new-breakpoint(max-width 960px 12);
+		--mobile: new-breakpoint(max-width 480px 4);
+		--smallDesktop: new-breakpoint(max-width 960px 12);
 }
