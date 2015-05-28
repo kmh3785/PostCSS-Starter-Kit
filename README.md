@@ -19,9 +19,12 @@ npm install
 This starter kit makes use of a few common features and plugins that will make the switch from a preprocessor easier.
 
 ### Gulp plugins
+- autoprefixer-core
 - gulp-concat
+- gulp-cssmin
 - gulp-htmlmin
 - gulp-imagemin
+- gulp-jshint
 - imagemin-pngquant
 - gulp-jshint
 - gulp-notify
@@ -35,6 +38,7 @@ This starter kit makes use of a few common features and plugins that will make t
 - postcss-mixins [Allows mixin support]
 - postcss-nested [Allows nested CSS]
 - postcss-cssnext [Allows use of CSS4 syntax and features]
+- postcss-neat [Allows use of the Bourbon Neat grid system]
 
 #### Some common CSS4 features include:
 ##### Variables & Calculations
