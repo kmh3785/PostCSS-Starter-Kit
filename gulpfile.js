@@ -22,7 +22,7 @@ var gulp = require('gulp'),
       ]))
       .pipe(cssnext()) // Autoprefixer is included in cssnext
       .pipe(cssmin())
-      .pipe(gulp.dest('build/css/'))
+      .pipe(gulp.dest('./build/css/'))
       .pipe(notify({ message: 'Styles task complete' }))
   });
 
