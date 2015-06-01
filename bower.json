@@ -16,7 +16,11 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "~4.2.2",
+   
+  },
+  "devDependencies": {
+    "trianglify": "~0.2.1",
+     "bourbon": "~4.2.2",
     "neat": "~1.7.2",
     "normalize.css": "~3.0.3"
   }
